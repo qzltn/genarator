@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="min-h-screen bg-slate-900 flex justify-center items-center">
+
+
+        <div class="w-[450px] bg-slate-800 rounded-xl p-6">
+
+
+            <h1 class="text-white text-3xl font-bold text-center mb-6">
+                Password Generator
+            </h1>
+
+
+
+            <div class="flex gap-2">
+
+
+                <input
+                type="text"
+                id="password"
+                placeholder="Password"
+                readonly
+                class="flex-1 bg-slate-700 text-white rounded-lg p-3 outline-none"
+                >
+
+
+
+                <button
+                id="copyBtn"
+                class="text-white text-xl hover:text-green-400 transition"
+                >
+
+                    <i class="fa-regular fa-copy"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <div class="mt-6">
+
+
+                <div class="flex justify-between items-center">
+
+
+                    <label 
+                    for="length"
+                    class="text-white font-semibold"
+                    >
+
+                        Password Length
+
+                    </label>
+
+
+
+                    <span
+                    id="lengthValue"
+                    class="text-green-400 font-bold"
+                    >
+
+                        10
+
+                    </span>
+
+
+
+                </div>
+
+
+
+
+                <input
+
+                type="range"
+                id="length"
+                min="4"
+                max="20"
+                value="10"
+                class="w-full mt-3"
+
+                >
+
+
+
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+
+
+  <div>
+    <input 
+    type="checkbox"
+    id="uppercase"
+    checked
+    >
+
+    <label 
+    for="uppercase"
+    class="text-white ml-2"
+    >
+      Uppercase Letters
+    </label>
+  </div>
+
+
+
+  <div>
+    <input 
+    type="checkbox"
+    id="lowercase"
+    checked
+    >
+
+    <label 
+    for="lowercase"
+    class="text-white ml-2"
+    >
+      Lowercase Letters
+    </label>
+  </div>
+
+
+
+  <div>
+    <input 
+    type="checkbox"
+    id="numbers"
+    checked
+    >
+
+    <label 
+    for="numbers"
+    class="text-white ml-2"
+    >
+      Numbers
+    </label>
+  </div>
+
+
+
+  <div>
+    <input 
+    type="checkbox"
+    id="symbols"
+    >
+
+    <label 
+    for="symbols"
+    class="text-white ml-2"
+    >
+      Symbols
+    </label>
+  </div>
+
+
+</div>
+<div class="mt-6">
+
+    <div class="flex justify-between">
+
+        <span class="text-white">
+            Strength
+        </span>
+
+
+        <span class="text-green-400 font-bold">
+            Medium
+        </span>
+
+    </div>
+
+
+    <div class="w-full h-2 bg-slate-700 rounded-full mt-3">
+
+        <div class="w-1/2 h-full bg-green-400 rounded-full"></div>
+
+    </div>
+
+
+</div>
+<button
+id="generateBtn"
+class="
+w-full
+mt-6
+bg-green-500
+hover:bg-green-600
+text-white
+font-bold
+py-3
+rounded-lg
+transition
+cursor-pointer
+"
+>
+
+    Generate Password
+</button>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script type="module" src="/src/main.js"></script>
+
+
+</body>
+
+</html>
